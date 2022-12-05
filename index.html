@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Deteccion de rostros</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <script src="face-api.min.js"></script>
+
+        <style>
+            body {
+                background: #59C173;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #5D26C1, #a17fe0, #59C173);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #5D26C1, #a17fe0, #59C173); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+            #div1{
+                margin: 0;
+                padding: 0;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            canvas{
+                position: absolute;
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav class="navbar sticky-top navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"><i class="bi bi-house-door-fill"></i> Inicio</a>
+            </div>
+        </nav>
+
+        <div class="px-4 py-2 my-2 text-center border-bottom">
+            <img class="d-block mx-auto mb-2" src="img2.png" alt="" width="80" height="80">
+            <h1 class="display-5 fw-bold">Reconocimiento facial utilizando FaceApi con Tensorflow.js</h1>
+            <div class="col-lg-6 mx-auto">
+              <p class="lead mb-0">Reconocimiento facial usando la c&aacute;mara web</p>
+            </div>
+        </div>
+        
+        <div id="div1">
+            <video id="video" width="720" height="560" autoplay muted></video>
+        </div>
+        
+        <div class="b-example-divider"></div> 
+    
+          <div class="bg-dark text-secondary mt-5 px-4 py-2 text-center">
+            <div class="py-2">
+              <h1 class="display-5 fw-bold text-white">Grupo X</h1>
+              <div class="col-lg-6 mx-auto">
+                <p class="fs-5 mb-4">Wilson Mayorga x Walter Ceren</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="b-example-divider mb-0"></div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
